@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dashboard</title>
+  <style>
+    body {
+      background-color: #1E242C;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+
+    }
+    
+    #container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100vh;
+      margin-bottom: -90px;
+    }
+
+  #containerupper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 8vh;
+      background-color: #2D3644
+     }
+
+    #leftcontainer {
+      width: 800px;
+      height: 600px;
+      background-color: #2D3644;
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      margin-left: 5%;
+      margin-bottom: 5%;
+    }
+
+    .circle1 {
+      width: 90px;
+      height: 90px;
+      background-color: #51606D;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: bold;
+      margin-left: -30px; 
+      margin-top: 30px;
+    }
+    .circle1:hover {
+      background-color: rgb(109, 202, 220);
+    }
+
+    .arrow-clip {
+      width: 40px;
+      height: 9px;
+      background: #51606D;
+      margin-left: 7px;
+      margin-right: 1%;
+      clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+      transform: rotate(180deg);
+    }
+    .arrow-clip:hover {
+      background-color: rgb(109, 202, 220);
+    }
+
+    .circle2 {
+      width: 90px;
+      height: 90px;
+      background-color: #51606D;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: bold;
+      margin-top: 30px;
+      margin-right: 10%;
+    }
+    .circle2:hover {
+      background-color: rgb(109, 202, 220);
+    }
+
+    .circle3 {
+      width: 90px;
+      height: 90px;
+      background-color: #51606D;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: bold;
+      margin-left: -480px; 
+      margin-top: 30px;
+    }
+    .circle3:hover {
+      background-color: rgb(109, 202, 220);
+    }
+
+    .arrow2-clip {
+      width: 40px;
+      height: 9px;
+      background: #51606D;
+      margin-left: -150px;
+      margin-right: 10%;
+      clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+    }
+    .arrow2-clip:hover {
+      background-color: rgb(109, 202, 220);
+    } 
+    .arrow33-clip {
+      width: 70px;
+      height: 9px;
+      background: #51606D;
+      margin-left: -160px;
+      clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+      transform: rotate(124deg);
+      position: absolute;
+      margin-top: 19%;
+    }
+    .arrow33-clip:hover {
+      background-color: rgb(109, 202, 220);
+    }
+    .circle4 {
+      width: 90px;
+      height: 90px;
+      background-color: #51606D;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: bold;
+      margin-top: 15%;
+      margin-left: -220px;
+    }
+    .circle4:hover {
+      background-color: rgb(109, 202, 220);
+    }
+    .arrow3-clip {
+      width: 40px;
+      height: 9px;
+      background: #51606D;
+      margin-left: -244px;
+      margin-right: 8%;
+      clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+      transform: rotate(90deg);
+      position: absolute;
+      margin-top: 19%;
+    }
+    .arrow3-clip:hover {
+      background-color: rgb(109, 202, 220);
+    }
+    
+    .arrow4-clip {
+      width: 40px;
+      height: 9px;
+      background: #51606D;
+      margin-left: -180px;
+      margin-right: 10%;
+      clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+      transform: rotate(270deg);
+      position: absolute;
+      margin-top: 18.9%;
+    }
+    .arrow4-clip:hover {
+      background-color: #6dcadc;
+    }
+     
+    
+    .circle5 {
+      width: 90px;
+      height: 90px;
+      background-color: #51606D;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: bold;
+      margin-top: 23%;
+      margin-left: -347px;
+      position: absolute;
+    }
+    .circle5:hover {
+      background-color: rgb(109, 202, 220);
+    }
+    .arrow5-clip {
+      width: 40px;
+      height: 9px;
+      background: #51606D;
+      margin-left: -40px;
+      margin-right: 10%;
+      margin-top: 26%;
+      clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+      position: absolute;
+    }
+    .arrow5-clip:hover {
+      background-color: rgb(109, 202, 220);
+    }
+
+    .circle6 {
+      width: 90px;
+      height: 90px;
+      background-color: #51606D;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: bold;
+      margin-top: 23%;
+      margin-left: -24px;
+      position: absolute;
+    }
+    .circle6:hover {
+      background-color: rgb(109, 202, 220);
+    }
+    .arrow6-clip {
+      width: 40px;
+      height: 9px;
+      background: #51606D;
+      margin-left: 140px;
+      margin-top: 26%;
+      clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+      position: absolute;
+    }
+    .arrow6-clip:hover {
+      background-color: rgb(109, 202, 220);
+    }
+    .circle7 {
+      width: 90px;
+      height: 90px;
+      background-color: #51606D;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: bold;
+      margin-top: 23%;
+      margin-left: 20%;
+      position: absolute;
+    }
+    .circle7:hover {
+      background-color: rgb(109, 202, 220);
+    }
+    .rightcontainer {
+      width: 400px;
+      height: 560px;
+      background-color: #2D3644;
+      margin-left: -10px;
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px;
+      margin-left: -20%;
+      margin-bottom: 16%;
+
+    }
+
+    .rightcontainer p {
+      text-align: left;
+      color: #ffffff;
+      font-size: 40px;
+      margin-top: 13%;
+      margin-right: -100px;
+      font-family: serif;
+    }
+
+    .rightcontainer h2 {
+      color: #ffffff;
+      font-size: 16px;
+      margin-top: 30%;
+      margin-right: 15%;
+    }
+
+    .rightcontainer h1 {
+      text-align: right;
+      color: #ffffff;
+      font-size: 60px;
+      margin-right: 10%;
+      margin-top: 15%;
+    }
+
+    .second p {
+      text-align: left;
+      color: #ffffff;
+      font-size: 15px;
+      margin-top: 32%;
+      font-family: serif;
+      margin-right: -140px;
+      margin-left: -15%;
+      align-items: center;
+      position: absolute;
+    }
+
+    .second h2 {
+      color: #ffffff;
+      font-size: 25px;
+      margin-top: 34%;
+      position: absolute;
+      margin-right: -140px;
+      margin-left: -16%;
+    }
+
+    #container2 {
+      width: 280px;
+      height: 150px;
+      align-items: baseline;
+      margin-top: 15%;
+      margin-left: -20%;
+      margin-right: 3%;
+      position: absolute;
+    }
+
+    #text {
+      width: 280px;
+      height: 150px;
+      align-items: baseline;
+      margin-top: 17%;
+      margin-left: 112%;
+      position: absolute;
+    }
+
+    .text1 p {
+      text-align: left;
+      color: #ffffff;
+      font-size: 15px;
+      margin-top: -1%;
+      font-family: serif;
+      margin-right: 30px;
+      margin-left: -120px;
+      align-items: center;
+      position: absolute;
+    }
+
+
+
+    .text2 p {
+      text-align: left;
+      color: #ffffff;
+      font-size: 15px;
+      margin-top: 9%;
+      font-family: serif;
+      margin-right: 30px;
+      margin-left: -115px;
+      align-items: center;
+      position: absolute;
+    }
+
+    .text3 p {
+      text-align: left;
+      color: #ffffff;
+      font-size: 15px;
+      margin-top: 8%;
+      font-family: serif;
+      margin-right: 30px;
+      margin-left: -123px;
+      align-items: center;
+      position: absolute;
+    }
+
+    .progress-bar {
+      width: 100px; 
+      margin-left: -90%;
+      margin-top:-40% ;
+      accent-color: #6dcadc;
+    }
+    .progress-label {
+  position: relative;  
+ right: 183%;
+ top: 2%;
+}
+    .progress-bar2 {
+      width: 100px; 
+      margin-left: -90%;
+      margin-top:10% ;
+      accent-color: #6dcadc;
+    }
+
+    .progress-label2 {
+  position: relative;  
+ right: 183%;
+ top: 12%;
+}
+
+    .progress-bar3{
+      width: 100px; 
+      margin-left: -90%;
+      margin-top:10% ;
+      accent-color: #6dcadc;
+    }
+    .progress-label3 {
+  position: relative;  
+ right: 183%;
+ top: 45%;
+}
+
+  </style>
+</head>
+<body>
+    <div id="containerupper"></div>
+  <div id="container">
+    <div id="leftcontainer">
+      <div class="circle1">0</div>
+      <div class="arrow-clip"></div>
+      <div class="circle2">1,863</div>
+      <div class="circle3">11,863</div>
+      <div class="arrow33-clip"></div>
+      <div class="arrow2-clip"></div>
+      <div class="circle4">1,863</div> 
+           <div class="arrow3-clip"></div>
+           <div class="arrow4-clip"></div>
+      <div class="circle5">1,000</div>
+      <div class="arrow5-clip"></div>
+      <div class="circle6">16,000</div>
+      <div class="arrow6-clip"></div>
+      <div class="circle7">0</div>
+    </div>
+    <div id="rightSquares">
+      <div class="rightcontainer">
+        <p> ذي الحجة </p> <h2> 07:30-07:45</h2><h1> 11 </h1>
+      
+       <div class="second"><p> عدد الحجاج</p> <h2> 52,983</h2> </div>
+
+       <div id="container2">
+        <div id="text">
+          <div class="text1">
+            <p>حجاج الداخل</p>
+            <p class="progress-label">90%</p>
+            <progress class="progress-bar" value="90" max="100"></progress>
+          </div>
+          <div class="text2">
+            <p>نقاط التجمع</p>
+            <p class="progress-label2">40%</p>
+            <progress class="progress-bar2" value="50" max="100"></progress>
+          </div>
+          <div class="text3">
+            <p>المسجد الحرام</p>
+            <p class="progress-label3">60%</p>
+            <progress class="progress-bar3" value="70" max="100"></progress>
+          </div>
+        </div>
+      </div> 
+      
+    </div>
+  </div>
+</body>
+</html>
